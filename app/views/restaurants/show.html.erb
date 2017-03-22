@@ -1,0 +1,16 @@
+<!-- <h1>Restaurants#show</h1>
+<p>Find me in app/views/restaurants/show.html.erb</p>
+
+ -->
+
+<%= link_to "Delete", restaurant_path(restaurant),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+
+<%= @restaurant.reviews. each do |restaurant| %>
+<%= @restaurant.name %>
+<%= @restaurant.adress %>
+<%= @restaurant.phone_number %>
+<%= @restaurant.category %>
+<% end %>
