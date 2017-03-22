@@ -3,14 +3,18 @@
 
  -->
 
-<%= link_to "Delete", restaurant_path(restaurant),
+<%= link_to "Delete", restaurant_path(@restaurant),
       method: :delete,
       data: { confirm: "Are you sure?" } %>
 
 
-<%= @restaurant.reviews. each do |restaurant| %>
-<%= @restaurant.name %>
-<%= @restaurant.adress %>
-<%= @restaurant.phone_number %>
-<%= @restaurant.category %>
+<% @restaurant.reviews.each do |review| %>
+<%= review.content %>
+<%= review.rating %>
 <% end %>
+
+<p><%= @restaurant.name %></p>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+
